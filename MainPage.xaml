@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="_8thball.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_8thball"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="645" Width="505">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-140,115">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas HorizontalAlignment="Left" Margin="0,3,0,-119" Width="505" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <CompositeTransform ScaleY="-1"/>
+            </Canvas.RenderTransform>
+            <Canvas.Background>
+                <SolidColorBrush Color="BlueViolet" Opacity="0.75"/>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Margin="5,0,0,-115" Width="500" Height="645" VerticalAlignment="Top">
+            <Canvas.Background>
+                <SolidColorBrush Color="BlueViolet" Opacity="0.75"/>
+            </Canvas.Background>
+
+            <Ellipse x:Name="el1" Width="290" Fill="Black"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Height="500" Margin="40,45,30,95" RenderTransformOrigin="0.5,0.5"
+                />
+            <Ellipse x:Name="el2" Width="225" Fill="LightSlateGray"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                Height="345" Margin="75,140,60,155" RenderTransformOrigin="0.5,0.5"
+                />
+            <Button Content="Search" Name="Button1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="65" Width="70" Canvas.Left="390" Canvas.Top="570" RenderTransformOrigin="0.5,0.5"
+                    Background="LightGray" Tapped="Button1_Tapped">
+            </Button>
+            <Image Source="Assets/figure8.png"  HorizontalAlignment="Left" Height="240"  VerticalAlignment="Top" Width="195" RenderTransformOrigin="-5.68,-1.144" Canvas.Left="90" Canvas.Top="190"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ask the magic *th ball a question and press search:" VerticalAlignment="Top" Width="420" Height="40" Canvas.Left="10" Canvas.Top="545"/>
+            <TextBox Name="Harold" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="375" Height="60" RenderTransformOrigin="0.5,0.5" Canvas.Left="10" Canvas.Top="575"/>
+        </Canvas>
+    </Grid>
+</Page>
